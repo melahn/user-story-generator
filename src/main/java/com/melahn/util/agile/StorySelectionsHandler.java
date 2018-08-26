@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
 public class StorySelectionsHandler {
 
     private String selectionsFilename = null;
@@ -16,6 +17,9 @@ public class StorySelectionsHandler {
         readSelections();
     }
 
+    /**
+     * Reads a selections file
+     */
     void readSelections() {
         FileInputStream is = null;
         try {
@@ -39,20 +43,12 @@ public class StorySelectionsHandler {
         }
     }
 
-    protected void setSelectionsFilename(String f) {
-        selectionsFilename = f;
-    }
-
     public String getSelectionsFilename() {
         return selectionsFilename;
     }
 
     ArrayList<String> getSelections() {
         return selections;
-    }
-
-    public void setSelections(ArrayList<String> selections) {
-        this.selections = selections;
     }
 
 }

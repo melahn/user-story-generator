@@ -4,12 +4,11 @@ import org.apache.poi.ss.usermodel.*;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.util.ArrayList;
 
 public class DenormalizedStorySheetsHandler extends StorySheetsHandler {
 
     /**
-     * Reads the data from a sheet from a file.
+     * Reads the data from a sheet from a Denormalized data file.
      *
      * @param dataFilename  The name of a file containing the sheet
      *                      to be read.

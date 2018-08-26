@@ -58,6 +58,13 @@ public abstract class StorySheetsHandler {
         }
     }
 
+    /**
+     * Factory method to generate the right kind of a Sheet Handler based on whether
+     * the data is normalized or not
+     *
+     * @param selectionsFilename
+     * @return Either an instance of a DenormalizedStorySheetsHandler or a NormalizedStorySheetsHandler
+     */
     public static StorySheetsHandler createStorySheetsHandler(String selectionsFilename) {
         StorySheetsHandler storySheetsHandler;
         if (selectionsFilename != null) {
@@ -75,32 +82,16 @@ public abstract class StorySheetsHandler {
         return roles;
     }
 
-    public void setRoles(ArrayList<String> roles) {
-        this.roles = roles;
-    }
-
     public ArrayList<String> getGoals() {
         return goals;
-    }
-
-    public void setGoals(ArrayList<String> goals) {
-        this.goals = goals;
     }
 
     public ArrayList<String> getBenefits() {
         return benefits;
     }
 
-    public void setBenefits(ArrayList<String> benefits) {
-        this.benefits = benefits;
-    }
-
     public ArrayList<String> getCriteria() {
         return criteria;
-    }
-
-    public void setCriteria(ArrayList<String> criteria) {
-        this.criteria = criteria;
     }
 
     public StorySelectionsHandler getStorySelectionsHandler() {

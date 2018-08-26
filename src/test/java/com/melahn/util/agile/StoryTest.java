@@ -15,6 +15,9 @@ public class StoryTest {
     File generated = new File(testDirName + "/" + testDirGeneratedFileName);
 
     @BeforeClass
+    /**
+     * Creates a new test directory for the generated test files.
+     */
     public static void setUp() {
         try {
             Files.deleteIfExists(testDir.toPath());
@@ -27,7 +30,10 @@ public class StoryTest {
             System.out.println("Test setup failed: " + e.getMessage());
         }
     }
-
+    /**
+     * Tests the creation of a set of user stories based on Normalized data.  Does a simple comparison
+     * of the generated data to the expected data using the examples.
+     */
     @Test
     public void testNormalized() {
         File expected = new File("./resource/example/user-story-generated.txt");
@@ -50,6 +56,10 @@ public class StoryTest {
     }
 
     @Test
+    /**
+     * Tests the creation of a set of user stories based on Denormalized data.  Does a simple comparison
+     * of the generated data to the expected data using the examples.
+     */
     public void testDenormalized() {
         File expected = new File("./resource/example/user-story-generated.txt");
         String[] args = {

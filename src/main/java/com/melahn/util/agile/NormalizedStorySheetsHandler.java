@@ -4,8 +4,6 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -19,7 +17,7 @@ public class NormalizedStorySheetsHandler extends StorySheetsHandler {
     }
 
     /**
-     * Reads the data from a set of sheets from a file.
+     * Reads the data from a set of sheets from a normalized data file.
      *
      * @param dataFilename  The name of a file containing the sheets
      *                      to be read.
@@ -53,10 +51,6 @@ public class NormalizedStorySheetsHandler extends StorySheetsHandler {
 
     public ArrayList<String> getSelections() {
         return selections;
-    }
-
-    public void setSelections(ArrayList<String> selections) {
-        this.selections = selections;
     }
 
 }

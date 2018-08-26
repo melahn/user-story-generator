@@ -60,7 +60,8 @@ java -jar user-story-generator-1.0-SNAPSHOT.jar -d <filename> --- -o <filename> 
       *  The location of a spreadsheet file containing the user story data (Roles, Goals, Benefits and Criteria)
    * **-o** \<filename\>
         *  The location of a file to which the stories will be written.  If the file
-         already exists it will be overwritten without warning.
+         already exists it will be overwritten without warning.  If not specified,
+         standard out is used.
    * **-h**
       * Help.  Whenever specified, any other parameters are ignored.  When no parameters are specified, **-h** is assumed.
  
@@ -119,7 +120,8 @@ java -jar user-story-generator-1.0-SNAPSHOT.jar -d <filename> --- -s <filename> 
         *  The location of a csv file containing the selection data
    * **-o** \<filename\>
         *  The location of a file to which the stories will be written.  If the file
-         already exists it will be overwritten without warning.
+         already exists it will be overwritten without warning.  If not specified, standard out
+         is used.
    * **-h**
       * Help.  Whenever specified, any other parameters are ignored.  When no parameters are specified, **-h** is assumed.
   

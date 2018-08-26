@@ -5,13 +5,11 @@ import java.util.ArrayList;
 
 /**
  * 
- * Generates a set of user stories from a set of roles, goals, benefits and selections.
+ * Prints a set of user stories from a set of roles, goals, benefits and selections.
  *
  */
 public class StoryPrinter {
 
-    private final static String DEFAULT_DATA_FILE = "data.xslx";
-    private final static String DEFAULT_SELECTIONS_FILE = "selections.txt";
     private  String outputFilename;
     private static PrintWriter writer = null;
     private StorySheetsHandler storySheetsHandler;
@@ -24,7 +22,7 @@ public class StoryPrinter {
     }
 
     /**
-     * Aoplies the selections array to create stories
+     * Applies the selections array to print stories
      *
      * @param a An array of selections read from a selections file.
      *
@@ -42,12 +40,24 @@ public class StoryPrinter {
         }
     }
 
+    /**
+     * Prints user stories based on a simple iteration of the data file, i.e.
+     * not using a selections file.
+     */
     private void printAllRows() {
         for (int i = 0 ; i < storySheetsHandler.getRoles().size(); i++){
             printStory(i);
         }
     }
 
+    /**
+     * Makes sure that the selections the user provided make sense by checking the
+     * limits of the data in the spreadsheet.
+     *
+     * @param i The selections for a given line
+     * @param l The line number (used for error messages)
+     * @throws Exception
+     */
     void validateSelections(int[] i, int l) throws Exception {
         String s = "Error on line " + l + " in selections file " + storySelectionsHandler.getSelectionsFilename() + ": ";
         String e = null;
@@ -73,7 +83,7 @@ public class StoryPrinter {
         }
     }
     /**
-     * Prints a single user story
+     * Prints a single user story based on a selection list
      *
      * @param i The index into an array of roles
      *
@@ -97,6 +107,11 @@ public class StoryPrinter {
         }
     }
 
+
+    /**
+     * Prints a user story based on the data in a single line in the spreadsheet
+     * @param i The line to be used for the story
+     */
     private void printStory(int i) {
         String s = "As a " + storySheetsHandler.getRoles().get(i) + " I want to " + storySheetsHandler.getGoals().get(i) + " so that I can " + storySheetsHandler.getBenefits().get(i) + ".\n";
         s += "\tAcceptance Criteria:";
