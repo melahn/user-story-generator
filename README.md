@@ -23,7 +23,7 @@ The spreadsheet file is structured to contain the four columns in the first
 sheet.  No column headers are assumed.  Each row in the first column contains a Role. Each row in the second column contains a Goal  Each row in the third column contains a
 Benefit.  The fourth column contains a list of Acceptance Criteria.  
 
-An example of a denormalized data file is [here](./resource/example/user-story-denormalized.xlsx)
+An example of a denormalized data file is [here](./resource/example/user-story-denormalized-data.xlsx)
 
 For each row containing data for a Role, a user story is generated and printed by simply surrounding the data with text 
 to form a complete user story sentence of the form.
@@ -52,7 +52,7 @@ following names.
 * Benefit
 * Criterion
 
-An example of a normalized data file is [here](./resource/example/user-story-normalized.xlsx)
+An example of a normalized data file is [here](./resource/example/user-story-normalized-data.xlsx)
 
 A second file is a selection file in csv format, that contains a list of integers that
 relate each of the columns in the spreadsheet file to form a user story statement.
