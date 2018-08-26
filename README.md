@@ -104,22 +104,10 @@ java --- -d <filename> --- -s <filename> --- -o <filename> ---+----------+
 ## Prerequisites
 
 Java Runtime, V1.8 or later
+                                          
+### Example of a Generated File
 
-
-#### Example Commands
-
-##### Generating User Stories using a normalized data file 
-```
-java -jar "./target/user-story-generator-1.0-SNAPSHOT.jar -d "./resource/example/user-story-example-data.xlsx" 
-
-```
-When *true*, refresh the local Helm repo (default *false*)
-* *verbose*           
-  * When *true*, provides a little more information as the Chart Map is generated (default *false*)
-                                           
-### Examples of a Generated File
-
-[This file](./resource/example/user-story-generated.txt)
+[This file](./resource/example/user-story-generated.txt) was generate using the examples shown above.
 
 
 ### Maven Commands
