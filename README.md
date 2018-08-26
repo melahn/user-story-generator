@@ -14,6 +14,9 @@ so I added the ability to generate the user stories from reusable fragments (i.e
 The stories are generated from user story data expressed in both
 a *normalized (simple)* form and a *denormalized* form.  The data is encoded in spreadsheets.
 
+## Prerequisite
+
+Java Runtime, V1.8 or later
 
 ###  Simple Form (Denormalized Data)
 
@@ -37,11 +40,30 @@ As a <role> I want to <goal> so that <benefit>
 ```
 #### Running the Simple Example 
 ```
-java -jar original-user-story-generator-1.0-SNAPSHOT.jar 
+java -jar user-story-generator-1.0-SNAPSHOT.jar 
 -d "./resource/example/user-story-denormalized-data.xlsx" -o "./user-story-generated-denormalized.txt"
 
 ```
+#### Command Line Syntax (Denormalized Data)
 
+```
+                                    
+java -jar user-story-generator-1.0-SNAPSHOT.jar -d <filename> --- -o <filename> ---+----------+
+                                                                                   |          |
+                                                                                   +--- -h ---+       
+                 
+```
+
+#### Parameters
+
+   * **-d** \<filename\>
+      *  The location of a spreadsheet file containing the user story data (Roles, Goals, Benefits and Criteria)
+   * **-o** \<filename\>
+        *  The location of a file to which the stories will be written.  If the file
+         already exists it will be overwritten without warning.
+   * **-h**
+      * Help.  Whenever specified, any other parameters are ignored.  When no parameters are specified, **-h** is assumed.
+ 
 ### Complex Form (Normalized Data)
 
 In this form, the data is provided as a set of sheets, where each sheet contains a
@@ -72,21 +94,21 @@ As a <role> I want to <goal> so that <benefit>
 
 #### Running the Complex Example 
 ```
-java -jar original-user-story-generator-1.0-SNAPSHOT.jar 
+java -jar user-story-generator-1.0-SNAPSHOT.jar 
 -d "./resource/example/user-story-normalized-data.xlsx" -o "./user-story-generated-normalized.txt -s "./resource/example/user-story-normalized-data.csv"
 
 ```
 
 See the [example generated file](./resource/example/user-story-generated.txt)
 
-### Command Line Syntax
+#### Command Line Syntax (Normalized Data)
 
 ```
                                     
-java --- -d <filename> --- -s <filename> --- -o <filename> ---+----------+
-                                                              |          |
-                                                              +--- -h ---+       
-                   
+java -jar user-story-generator-1.0-SNAPSHOT.jar -d <filename> --- -s <filename> --- -o <filename> ---+----------+
+                                                                                                     |          |
+                                                                                                     +--- -h ---+       
+                  
 ```
 
 #### Parameters
@@ -101,9 +123,6 @@ java --- -d <filename> --- -s <filename> --- -o <filename> ---+----------+
    * **-h**
       * Help.  Whenever specified, any other parameters are ignored.  When no parameters are specified, **-h** is assumed.
   
-## Prerequisites
-
-Java Runtime, V1.8 or later
                                           
 ### Example of a Generated File
 
