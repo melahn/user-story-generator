@@ -184,7 +184,7 @@ java -jar user-story-generator-1.0-SNAPSHOT.jar -d <filename> --- -s <filename> 
    * **-h**
       * Help.  Whenever specified, any other parameters are ignored.  When no parameters are specified, **-h** is assumed.
   
-\
+
 ### Maven Commands
 
 #### Building the jar from source
