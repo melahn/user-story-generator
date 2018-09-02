@@ -1,4 +1,8 @@
-As a Solution Architect I want to quickly and easily test my code in my test Cloud environment that is deployed in a similar way to the production environment so that I can test how it could work, and what it will cost, in a corporate environment.
+As a Beatle I want to hold your hand so that I can have a hit single.
+	Acceptance Criteria:
+		The song must be less than three minutes long
+
+As a Solution Architect I want to quickly and easily test my code in my test Cloud environment so that I can test how it could work, and what it will cost, in a corporate environment.
 	Acceptance Criteria:
 		The solution can be installed in less than minute
 		The solution is less than 100 MB in size
@@ -16,7 +20,7 @@ As a Solution Architect I want to deploy the Client in my test Cloud so that I c
 		The solution is less than 100 MB in size
 		The solution can support at least 100 concurrent users
 
-As a Solution Developer I want to quickly and easily test my code in my test Cloud environment that is deployed in a similar way to the production environment so that I can try out writing some apps using it.
+As a Solution Developer I want to quickly and easily test my code in my test Cloud environment so that I can try out writing some apps using it.
 	Acceptance Criteria:
 		The solution can be installed in less than minute
 
@@ -25,7 +29,7 @@ As a Solution Developer I want to deploy the Repository in my test Cloud so that
 		The solution can be installed in less than minute
 		The solution can be uninstalled in less than two minutes
 
-As a Business Analyst I want to quickly and easily test my code in my test Cloud environment that is deployed in a similar way to the production environment so that I can evaluate how well it compares with the competition.
+As a Business Analyst I want to quickly and easily test my code in my test Cloud environment so that I can evaluate how well it compares with the competition.
 	Acceptance Criteria:
 		The solution can be installed in less than minute
 		The solution can be uninstalled in less than two minutes
@@ -41,7 +45,7 @@ As a Business Analyst I want to deploy the Repository in my test Cloud so that I
 		The solution is less than 100 MB in size
 		The solution can support at least 100 concurrent users
 
-As a System Admin I want to quickly and easily test my code in my test Cloud environment that is deployed in a similar way to the production environment so that I can test how it could work, and what it will cost, in a corporate environment.
+As a System Admin I want to quickly and easily test my code in my test Cloud environment so that I can test how it could work, and what it will cost, in a corporate environment.
 	Acceptance Criteria:
 		The solution can be installed in less than minute
 		The solution is less than 100 MB in size
