@@ -88,7 +88,7 @@ In this form, the data needed by the generator is provided in a spreadsheet file
 in that file for each type of element of a user story.  Because duplicate
  data is reduced (for example, a Role that is used in multiple user
  stories only needs to be specified once),
-I refer to it as *denormalized*. 
+I refer to it as *normalized*. 
 
 The spreadsheet file is structured so that the there is a sheet named 'Role', a sheet named
 'Goal', a sheet named 'Benefit' and a sheet named 'Criterion'.
