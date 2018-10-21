@@ -16,7 +16,7 @@ so I added the ability to generate the user stories from reusable fragments (i.e
 ## Usage
 
 The stories are generated from user story data expressed in both
-a *normalized (simple)* form and a *denormalized* form.  The data is encoded in spreadsheets.
+a simple form (with *denormalized* data) and a more complex form (with *normalized* data).  In both cases, the data is encoded in spreadsheets.
 
 ## Prerequisite
 
