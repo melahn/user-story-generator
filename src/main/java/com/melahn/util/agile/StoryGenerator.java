@@ -8,6 +8,7 @@ import org.apache.commons.cli.ParseException;
 
 public class StoryGenerator {
 
+    private static String version = "1.0.0";
     private final static String DEFAULT_DATA_FILE = "data.xslx";
     private static String dataFilename = DEFAULT_DATA_FILE;
     private static String selectionsFilename = null;
@@ -61,11 +62,16 @@ public class StoryGenerator {
      * Show the help
      */
     private static void showHelp() {
-        System.out.println("Usage: java -jar UserStoryGenerator.jar -d <userstorydataFilename> -s <userstoryselectionFilename> -o <outputfile>");
-        System.out.println("Defaults:");
-        System.out.println("\tuserstorydataFilename=" + DEFAULT_DATA_FILE);
-        System.out.println("\tuserstoryselectionFilename=<none>");
-        System.out.println("\toutputfile=stdout");
+        String help = "\nUsage:\n\n"
+                .concat("java -jar UserStoryGenerator-")
+                .concat(version)
+                .concat(".jar")
+                .concat("\nFlags:\n")
+                .concat("\t-d\t<filename>\tThe location of a spreadsheet file containing the user story data\n")
+                .concat("\t-o\t<filename>\tThe location of a file to which the stories will be written\n")
+                .concat("\t-s\t<filename>\tThe location of a csv file containing the selection data\n")
+                .concat("\nSee https://github.com/melahn/user-story-generator for more information\n");
+        System.out.print(help);
         System.exit(0);
     }
 }
