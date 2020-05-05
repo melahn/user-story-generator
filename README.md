@@ -37,21 +37,15 @@ Flags:
     -h              Help
 ```
 
-### Parameters
-
-    * **-d** \<filename\>
-        * The location of a spreadsheet file containing user story data 
-          (Roles, Goals, Benefits and Criteria). If not specified "data.xslx" will be assumed.
-    * **-o** \<filename\>
-        * The location of a file to which the stories will be written. If the file
-          already exists it will be overwritten without warning. If not specified,
-          standard out is used.
-    * **-s** \<filename\>
-        * The location of a file containing selection criteria. This is only needed when 
-          the input data file is in normalized form. 
-    * **-h**
-      * Help. Whenever specified, any other parameters are ignored.  
-        When no parameters are specified, **-h** is assumed.
+### Flags
+* **-d** \<filename\>
+  * The location of a spreadsheet file containing user story data (Roles, Goals, Benefits and Criteria). If not specified "data.xslx" will be assumed.
+* **-o** \<filename\>
+  * The location of a file to which the stories will be written. If the file already exists it will be overwritten without warning. If not specified, standard out is used.
+* **-s** \<filename\>
+  * The location of a file containing selection criteria. This is only needed when the input data file is in normalized form. 
+* **-h**
+  * Help. Whenever specified, any other parameters are ignored. When no parameters are specified, **-h** is assumed.
  
 ###  Simple Form (Denormalized Data)
 
