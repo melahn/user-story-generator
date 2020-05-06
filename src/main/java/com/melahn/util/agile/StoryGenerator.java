@@ -9,7 +9,7 @@ import org.apache.commons.cli.ParseException;
 public class StoryGenerator {
 
     private static String version = "1.0.0";
-    private final static String DEFAULT_DATA_FILE = "data.xslx";
+    private final static String DEFAULT_DATA_FILE = "data.xlsx";
     private static String dataFilename = DEFAULT_DATA_FILE;
     private static String selectionsFilename = null;
     private static String outputFilename = null;
@@ -36,7 +36,7 @@ public class StoryGenerator {
         options.addOption("d", true, "The Data Filename");
         options.addOption("s", true, "The Selection Filename");
         options.addOption("o", true, "The Output Filename");
-        options.addOption("h", false, "help");
+        options.addOption("h", false, "Help");
         CommandLineParser parser = new DefaultParser();
         try {
             CommandLine cmd = parser.parse(options, args);
@@ -67,9 +67,10 @@ public class StoryGenerator {
                 .concat(version)
                 .concat(".jar")
                 .concat("\nFlags:\n")
-                .concat("\t-d\t<filename>\tThe location of a spreadsheet file containing the user story data\n")
-                .concat("\t-o\t<filename>\tThe location of a file to which the stories will be written\n")
-                .concat("\t-s\t<filename>\tThe location of a csv file containing the selection data\n")
+                .concat("\t-d\t<filename>\tThe location of a spreadsheet file containing the user story data (default: \'data.xlsx\')\n")
+                .concat("\t-o\t<filename>\tThe location of a file to which the stories will be written (default: stdout)\n")
+                .concat("\t-s\t<filename>\tThe location of a csv file containing the selection data (default: none)\n")
+                .concat("\t-h\t\t\tHelp\n")
                 .concat("\nSee https://github.com/melahn/user-story-generator for more information\n");
         System.out.print(help);
         System.exit(0);
