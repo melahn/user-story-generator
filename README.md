@@ -31,9 +31,9 @@ Java Runtime, V1.8 or later
 java -jar user-story-generator-1.0.0.jar
 
 Flags:
-    -d  <filename>  The location of a spreadsheet file containing the user story data
-    -o  <filename>  The location of a file to which the stories will be written
-    -s  <filename>  The location of a file containing selection criteria
+    -d  <filename>  The location of a spreadsheet file containing the user story data (default: 'data.xlsx')
+    -o  <filename>  The location of a file to which the stories will be written (default: stdout)
+    -s  <filename>  The location of a file containing selection criteria (default: none)
     -h              Help
 ```
 
@@ -45,7 +45,7 @@ Flags:
 * **-s** \<filename\>
   * The location of a file containing selection criteria. This is only needed when the input data file is in normalized form. 
 * **-h**
-  * Help. Whenever specified, any other parameters are ignored. When no parameters are specified, **-h** is assumed.
+  * Help. Whenever specified, any other parameters are ignored.
  
 ###  Simple Form (Denormalized Data)
 
