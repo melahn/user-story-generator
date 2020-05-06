@@ -87,7 +87,6 @@
                                     <includes>
                                         <include>${project.artifactId}-${project.version}.jar</include>
                                     </includes>
-                                    <filtering>true</filtering>
                                 </resource>
                             </resources>
                         </configuration>
