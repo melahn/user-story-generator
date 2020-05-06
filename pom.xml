@@ -6,6 +6,38 @@
     <groupId>com.melahn</groupId>
     <artifactId>user-story-generator</artifactId>
     <version>1.0.0</version>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>A tool that generates user stories from spreadsheet data</description>
+    <url>https://github.com/melahn/user-story-generator</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:git://github.com/melahn/user-story-generator.git</connection>
+        <developerConnection>scm:git:ssh://github.com:melahn/user-story-generator.git</developerConnection>
+        <url>https://github.com/melahn/user-story-generator/tree/master</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>Gregory Melahn</name>
+            <email>gregorymelahn@gmail.com</email>
+            <organization>melahn.com</organization>
+            <organizationUrl>http://melahn.com</organizationUrl>
+        </developer>
+    </developers>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
