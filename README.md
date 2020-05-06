@@ -83,7 +83,7 @@ An example of a file generated from this data is [here](./resource/example/user-
 
 #### Running the Example 
 ```
-java -jar ./resource/jar/user-story-generator-1.0.0.jar -d "./resource/example/user-story-denormalized-data.xlsx" -o "./user-story-generated-denormalized.txt"
+java -jar "./resource/jar/user-story-generator-1.0.0.jar" -d "./resource/example/user-story-denormalized-data.xlsx" -o "./user-story-generated-denormalized.txt"
 ```
 
 ### Advanced Form (Normalized Data)
@@ -161,7 +161,7 @@ An example of a file generated from this data is [here](./resource/example/user-
 
 #### Running the Example 
 ```
-java -jar ./resource/jar/user-story-generator-1.0.0.jar -d "./resource/example/user-story-normalized-data.xlsx" -o "./user-story-generated-normalized.txt -s "./resource/example/user-story-normalized-data.csv"
+java -jar "./resource/jar/user-story-generator-1.0.0.jar" -d "./resource/example/user-story-normalized-data.xlsx" -o "./user-story-generated-normalized.txt" -s "./resource/example/user-story-normalized-data.csv"
 ```
 
 See the [example generated file](./resource/example/user-story-generated.txt)
