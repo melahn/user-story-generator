@@ -62,7 +62,7 @@ public abstract class StorySheetsHandler {
      * Factory method to generate the right kind of a Sheet Handler based on whether
      * the data is normalized or not
      *
-     * @param selectionsFilename
+     * @param selectionsFilename    The file name of the selections file
      * @return Either an instance of a DenormalizedStorySheetsHandler or a NormalizedStorySheetsHandler
      */
     public static StorySheetsHandler createStorySheetsHandler(String selectionsFilename) {

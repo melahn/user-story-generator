@@ -128,7 +128,7 @@ public class StoryPrinter {
     /**
      * Generates the stories
      *
-     * @throws Exception
+     * @throws Exception    Throws Exception
      */
     protected void printStories() throws Exception {
         if (outputFilename != null) {
