@@ -22,6 +22,17 @@ The stories are generated from user story data expressed in both
 a simple form (with *denormalized* data) and a more complex form (with *normalized* data).
 In both cases, the data is encoded in spreadsheets.
 
+## Maven Central 
+
+The jar file, along with source and javadoc, is available from **Maven Central**.  
+```
+<dependency>
+  <groupId>com.melahn</groupId>
+  <artifactId>user-story-generator</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
 ## Prerequisite
 
 Java Runtime, V1.8 or later
