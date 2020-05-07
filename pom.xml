@@ -92,7 +92,7 @@
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
                                         <Main-Class>com.melahn.util.agile.StoryGenerator</Main-Class>
-                                        <Build-Number>0.1</Build-Number>
+                                        <Build-Number>${buildNumber}</Build-Number>
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
@@ -118,12 +118,63 @@
                                     <directory>${basedir}/target</directory>
                                     <includes>
                                         <include>${project.artifactId}-${project.version}.jar</include>
+                                        <include>${project.artifactId}-${project.version}-javadoc.jar</include>
+                                        <include>${project.artifactId}-${project.version}-sources.jar</include>
                                     </includes>
                                 </resource>
                             </resources>
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <source>8</source>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <doCheck>false</doCheck>
+                    <doUpdate>true</doUpdate>
+                    <useLastCommittedRevision>true</useLastCommittedRevision>
+                    <scmConnectionUrl>scm:git:https://github.com/melahn/user-story-generator.git</scmConnectionUrl>
+                    <shortRevisionLength>10</shortRevisionLength>
+                </configuration>
             </plugin>
         </plugins>
         <finalName>${project.artifactId}-${project.version}</finalName>
